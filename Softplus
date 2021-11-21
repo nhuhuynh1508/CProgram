@@ -1,0 +1,29 @@
+/**
+*
+* this function aims to compute the softplus of an integer
+* input: a number (x)
+* output: softplus of a number
+*
+**/
+#include <stdio.h>
+#include <math.h>
+
+float compute_softplus (int x)
+{
+    float softplus_value = log(1+exp(x));
+    return softplus_value;
+}
+
+int main ()
+{
+    //sample test 1 with x = 1; expected result = 1.313
+    int x1 = 1;
+    printf ("Softplus of %d = %f \n", x1, compute_softplus (x1));
+
+    //sample test 1 with x = 5; expected result = 5.006
+    int x2 = 5;
+    printf ("Softplus of %d = %f \n", x2, compute_softplus (x2));
+
+    return 0;
+}
+
