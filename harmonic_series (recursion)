@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+double harmonic_series(double n)
+{
+    if (n < 2)
+        return 1;
+    else
+        return 1/(n) + harmonic_series(n - 1);
+}
+
+double main()
+{
+    printf("%.3f\n", harmonic_series(5));
+
+    return 0;
+}
+
+
