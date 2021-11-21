@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+
+float compute_tanh (int x)
+{
+    return (2/(1 + exp(-2*x))) - 1;
+}
+int main (int x)
+{
+    printf("Enter the value: ");
+    scanf("%f", &x);
+
+    printf("Implement of %f is %f \n", x, compute_tanh(x));
+
+    return 0;
+}
